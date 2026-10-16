@@ -2,10 +2,10 @@
 // Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-// Date        : Sat Jun 20 21:04:36 2026
+// Date        : Fri Jun 12 17:45:15 2026
 // Host        : DESKTOP-GTOUM49 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub {c:/Users/Arf/Desktop/ip_camera/New
-//               folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_axi_vdma_0_0/design_1_axi_vdma_0_0_stub.v}
+// Command     : write_verilog -force -mode synth_stub -rename_top design_1_axi_vdma_0_0 -prefix
+//               design_1_axi_vdma_0_0_ design_1_axi_vdma_0_0_stub.v
 // Design      : design_1_axi_vdma_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z010clg400-1

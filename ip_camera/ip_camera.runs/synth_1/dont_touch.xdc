@@ -39,4 +39,4 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_xl
 # IP: bd/design_1/ip/design_1_proc_sys_reset_1_0/design_1_proc_sys_reset_1_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_proc_sys_reset_1_0 || ORIG_REF_NAME==design_1_proc_sys_reset_1_0} -quiet] -quiet
 
-# XDC: c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/design_1_ooc.xdc
+# XDC: c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/design_1_ooc.xdc

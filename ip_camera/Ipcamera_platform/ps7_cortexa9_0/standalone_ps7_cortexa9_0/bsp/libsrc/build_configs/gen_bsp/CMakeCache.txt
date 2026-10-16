@@ -115,13 +115,13 @@ CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 CMAKE_FIND_PACKAGE_REDIRECTS_DIR:STATIC=C:/Users/Arf/Desktop/IP-Camera/ip_camera/ipcamera_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/build_configs/gen_bsp/CMakeFiles/pkgRedirects
 
 //No help, variable specified on the command line.
-CMAKE_INCLUDE_PATH:UNINITIALIZED=C:/Users/Arf/Desktop/IP-Camera/ip_camera/ipcamera_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/include
+CMAKE_INCLUDE_PATH:UNINITIALIZED=C:\Users\Arf\Desktop\IP-Camera\ip_camera\ipcamera_platform\ps7_cortexa9_0\standalone_ps7_cortexa9_0\bsp\include
 
 //Install path prefix, prepended onto install directories.
 CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/bsp
 
 //No help, variable specified on the command line.
-CMAKE_LIBRARY_PATH:UNINITIALIZED=C:/Users/Arf/Desktop/IP-Camera/ip_camera/ipcamera_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/lib
+CMAKE_LIBRARY_PATH:UNINITIALIZED=C:\Users\Arf\Desktop\IP-Camera\ip_camera\ipcamera_platform\ps7_cortexa9_0\standalone_ps7_cortexa9_0\bsp\lib
 
 //Path to a program.
 CMAKE_LINKER:FILEPATH=E:/xilinx/Vitis/2024.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/arm-none-eabi-ld.exe
@@ -150,7 +150,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELEASE:STRING=
 CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
 //No help, variable specified on the command line.
-CMAKE_MODULE_PATH:UNINITIALIZED=C:/Users/Arf/Desktop/IP-Camera/ip_camera/ipcamera_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp
+CMAKE_MODULE_PATH:UNINITIALIZED=C:\Users\Arf\Desktop\IP-Camera\ip_camera\ipcamera_platform\ps7_cortexa9_0\standalone_ps7_cortexa9_0\bsp
 
 //Path to a program.
 CMAKE_NM:FILEPATH=E:/xilinx/Vitis/2024.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/arm-none-eabi-nm.exe
@@ -207,7 +207,7 @@ CMAKE_SKIP_INSTALL_RPATH:BOOL=NO
 CMAKE_SKIP_RPATH:BOOL=NO
 
 //Specs file path for using CMAKE toolchain files
-CMAKE_SPECS_FILE:STRING=C:/Users/Arf/Desktop/IP-Camera/ip_camera/ipcamera_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/Xilinx.spec
+CMAKE_SPECS_FILE:STRING=C:\Users\Arf\Desktop\IP-Camera\ip_camera\ipcamera_platform\ps7_cortexa9_0\standalone_ps7_cortexa9_0\bsp\Xilinx.spec
 
 //Flags used by the linker during the creation of static libraries
 // during all build types.
@@ -232,8 +232,8 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 //Path to a program.
 CMAKE_STRIP:FILEPATH=E:/xilinx/Vitis/2024.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/arm-none-eabi-strip.exe
 
-//The CMake toolchain file
-CMAKE_TOOLCHAIN_FILE:FILEPATH=C:/Users/Arf/Desktop/IP-Camera/ip_camera/ipcamera_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/cortexa9_toolchain.cmake
+//No help, variable specified on the command line.
+CMAKE_TOOLCHAIN_FILE:UNINITIALIZED=C:\Users\Arf\Desktop\IP-Camera\ip_camera\ipcamera_platform\ps7_cortexa9_0\standalone_ps7_cortexa9_0\bsp\cortexa9_toolchain.cmake
 
 //If this value is on, makefiles will be generated without the
 // .SILENT directive, and all commands will be echoed to the console
@@ -387,7 +387,7 @@ lwip220_arp_queueing:STRING=1
 lwip220_arp_table_size:STRING=10
 
 //Turn on lwIP Debug?
-lwip220_debug:BOOL=OFF
+lwip220_debug:BOOL=true
 
 //Turn on lwIP Debug?
 lwip220_debug_options:BOOL=ON
@@ -399,10 +399,10 @@ lwip220_default_tcp_recvmbox_size:STRING=200
 lwip220_default_udp_recvmbox_size:STRING=100
 
 //Is DHCP required?
-lwip220_dhcp:BOOL=OFF
+lwip220_dhcp:BOOL=true
 
 //Debug dhcp protocol
-lwip220_dhcp_debug:BOOL=OFF
+lwip220_dhcp_debug:BOOL=true
 
 //Is DHCP required?
 lwip220_dhcp_options:BOOL=ON
@@ -423,7 +423,7 @@ lwip220_igmp_debug:BOOL=OFF
 lwip220_igmp_options:BOOL=OFF
 
 //Debug IP layer
-lwip220_ip_debug:BOOL=OFF
+lwip220_ip_debug:BOOL=true
 
 //Global default TTL used by transport layers
 lwip220_ip_default_ttl:STRING=255
@@ -506,7 +506,7 @@ lwip220_n_tx_coalesce:STRING=1
 lwip220_n_tx_descriptors:STRING=64
 
 //Debug network interface layer
-lwip220_netif_debug:BOOL=OFF
+lwip220_netif_debug:BOOL=true
 
 //Drops support for sys_timeout when NO_SYS==1
 lwip220_no_sys_no_timers:BOOL=ON
@@ -599,7 +599,7 @@ lwip220_temac_use_jumbo_frames:BOOL=OFF
 lwip220_udp:BOOL=ON
 
 //Debug UDP layer
-lwip220_udp_debug:BOOL=OFF
+lwip220_udp_debug:BOOL=true
 
 //UDP Options
 lwip220_udp_options:BOOL=ON

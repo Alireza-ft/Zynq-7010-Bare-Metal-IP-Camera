@@ -2,115 +2,88 @@
 
 #include "xparameters.h"
 #include "xil_printf.h"
+#include "xemacps.h"
 
 #include "lwip/init.h"
 #include "lwip/netif.h"
 #include "lwip/ip_addr.h"
 #include "netif/xadapter.h"
-#include "lwip/timeouts.h"
+
+#include "platform.h"
 
 struct netif server_netif;
 
-static unsigned char mac_address[] =
-{
-    0x00,
-    0x0A,
-    0x35,
-    0x00,
-    0x1E,
-    0x53
-};
+static unsigned char mac_address[] = { 0x00, 0x0A, 0x35, 0x00, 0x1E, 0x53 };
 
 static ip4_addr_t ipaddr;
 static ip4_addr_t netmask;
 static ip4_addr_t gateway;
 
+#define EMAC_BASE XPAR_XEMACPS_0_BASEADDR
+
+/* Read-only register dump. Never re-initialize the MAC from here. */
+static void print_mac_status(const char *tag)
+{
+    xil_printf("[%s] NWCTRL=%08X NWCFG=%08X NWSR=%08X\r\n", tag,
+        XEmacPs_ReadReg(EMAC_BASE, XEMACPS_NWCTRL_OFFSET),
+        XEmacPs_ReadReg(EMAC_BASE, XEMACPS_NWCFG_OFFSET),
+        XEmacPs_ReadReg(EMAC_BASE, XEMACPS_NWSR_OFFSET));
+    xil_printf("[%s] TXSR=%08X RXSR=%08X TXQBASE=%08X RXQBASE=%08X\r\n", tag,
+        XEmacPs_ReadReg(EMAC_BASE, XEMACPS_TXSR_OFFSET),
+        XEmacPs_ReadReg(EMAC_BASE, XEMACPS_RXSR_OFFSET),
+        XEmacPs_ReadReg(EMAC_BASE, XEMACPS_TXQBASE_OFFSET),
+        XEmacPs_ReadReg(EMAC_BASE, XEMACPS_RXQBASE_OFFSET));
+    xil_printf("[%s] TX=%u RX=%u RX_FCS_ERR=%u RX_RES_ERR=%u\r\n", tag,
+        XEmacPs_ReadReg(EMAC_BASE, XEMACPS_TXCNT_OFFSET),
+        XEmacPs_ReadReg(EMAC_BASE, XEMACPS_RXCNT_OFFSET),
+        XEmacPs_ReadReg(EMAC_BASE, XEMACPS_RXFCSCNT_OFFSET),
+        XEmacPs_ReadReg(EMAC_BASE, XEMACPS_RXRESERRCNT_OFFSET));
+}
+
 int network_init(void)
 {
-    xil_printf("Initializing Network...\r\n");
+    xil_printf("[NET] init start\r\n");
 
+    platform_init();
     lwip_init();
 
-    IP4_ADDR(&ipaddr,192,168,1,38);
-    IP4_ADDR(&netmask,255,255,255,0);
-    IP4_ADDR(&gateway,192,168,1,1);
+    IP4_ADDR(&ipaddr, 192,168,1,38);
+    IP4_ADDR(&netmask, 255,255,255,0);
+    IP4_ADDR(&gateway, 192,168,1,1);
 
-  
-
-    xil_printf("Before xemac_add\r\n");    
-    
-    if (!xemac_add(&server_netif,
-                &ipaddr,
-                &netmask,
-                &gateway,
-                mac_address,
-                XPAR_XEMACPS_0_BASEADDR))
+    if (!xemac_add(&server_netif, &ipaddr, &netmask, &gateway,
+                   mac_address, EMAC_BASE))
     {
-        xil_printf("Error: Failed to add Ethernet interface!\r\n");
+        xil_printf("[NET] xemac_add FAILED\r\n");
         return -1;
     }
 
-    xil_printf("MAC = %02X:%02X:%02X:%02X:%02X:%02X\r\n",
-        server_netif.hwaddr[0],
-        server_netif.hwaddr[1],
-        server_netif.hwaddr[2],
-        server_netif.hwaddr[3],
-        server_netif.hwaddr[4],
-        server_netif.hwaddr[5]);
-
-    xil_printf("HWADDR_LEN = %d\r\n", server_netif.hwaddr_len);
-    
-    xil_printf("After xemac_add\r\n");
-
     netif_set_default(&server_netif);
-
+    platform_enable_interrupts();
     netif_set_up(&server_netif);
 
-    if (netif_is_link_up(&server_netif))
-    {
-        xil_printf("Ethernet Link UP\r\n");
-    }
+    xil_printf("[NET] link %s, IP %d.%d.%d.%d\r\n",
+        netif_is_link_up(&server_netif) ? "UP" : "DOWN",
+        ip4_addr1(&ipaddr), ip4_addr2(&ipaddr),
+        ip4_addr3(&ipaddr), ip4_addr4(&ipaddr));
 
-    
-    else
-    {
-        xil_printf("Ethernet Link DOWN\r\n");
-    }    
-
-    xil_printf("Ethernet Interface Up\r\n");
-    xil_printf("Netif flags = %02X\r\n", server_netif.flags);        
-
-    xil_printf("lwIP OK\r\n");
-
-    
-    xil_printf("IP Address : %d.%d.%d.%d\r\n",
-        ip4_addr1(&ipaddr),
-        ip4_addr2(&ipaddr),
-        ip4_addr3(&ipaddr),
-        ip4_addr4(&ipaddr));
-
-    xil_printf("Gateway    : %d.%d.%d.%d\r\n",
-        ip4_addr1(&gateway),
-        ip4_addr2(&gateway),
-        ip4_addr3(&gateway),
-        ip4_addr4(&gateway));
-
-    
+    print_mac_status("after init");
     return 0;
 }
 
 void network_poll(void)
 {
-    static int cnt = 0;
+    static unsigned cnt = 0;
 
-    cnt++;
-
-    if(cnt % 100000 == 0)
+    if (++cnt % 500000 == 0)
     {
-        xil_printf("poll\r\n");
-        xil_printf("Netif flags = %02X\r\n", server_netif.flags);
+        print_mac_status("poll");
     }
 
     xemacif_input(&server_netif);
-    //sys_check_timeouts();
+}
+
+void network_debug_dump(void)
+{
+    print_mac_status("dump");
 }

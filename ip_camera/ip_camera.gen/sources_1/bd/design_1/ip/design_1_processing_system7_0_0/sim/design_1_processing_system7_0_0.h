@@ -80,17 +80,6 @@ public:
 
   // module pin-to-pin RTL interface
 
-  sc_core::sc_out< sc_dt::sc_bv<1> > ENET0_GMII_TX_EN;
-  sc_core::sc_out< sc_dt::sc_bv<1> > ENET0_GMII_TX_ER;
-  sc_core::sc_out< sc_dt::sc_bv<8> > ENET0_GMII_TXD;
-  sc_core::sc_in< bool > ENET0_GMII_COL;
-  sc_core::sc_in< bool > ENET0_GMII_CRS;
-  sc_core::sc_in< bool > ENET0_GMII_RX_CLK;
-  sc_core::sc_in< bool > ENET0_GMII_RX_DV;
-  sc_core::sc_in< bool > ENET0_GMII_RX_ER;
-  sc_core::sc_in< bool > ENET0_GMII_TX_CLK;
-  sc_core::sc_in< bool > ENET0_EXT_INTIN;
-  sc_core::sc_in< sc_dt::sc_bv<8> > ENET0_GMII_RXD;
   sc_core::sc_out< bool > M_AXI_GP0_ARVALID;
   sc_core::sc_out< bool > M_AXI_GP0_AWVALID;
   sc_core::sc_out< bool > M_AXI_GP0_BREADY;
@@ -247,17 +236,6 @@ public:
 
   // module pin-to-pin RTL interface
 
-  sc_core::sc_out< sc_dt::sc_bv<1> > ENET0_GMII_TX_EN;
-  sc_core::sc_out< sc_dt::sc_bv<1> > ENET0_GMII_TX_ER;
-  sc_core::sc_out< sc_dt::sc_bv<8> > ENET0_GMII_TXD;
-  sc_core::sc_in< bool > ENET0_GMII_COL;
-  sc_core::sc_in< bool > ENET0_GMII_CRS;
-  sc_core::sc_in< bool > ENET0_GMII_RX_CLK;
-  sc_core::sc_in< bool > ENET0_GMII_RX_DV;
-  sc_core::sc_in< bool > ENET0_GMII_RX_ER;
-  sc_core::sc_in< bool > ENET0_GMII_TX_CLK;
-  sc_core::sc_in< bool > ENET0_EXT_INTIN;
-  sc_core::sc_in< sc_dt::sc_bv<8> > ENET0_GMII_RXD;
   sc_core::sc_out< bool > M_AXI_GP0_ARVALID;
   sc_core::sc_out< bool > M_AXI_GP0_AWVALID;
   sc_core::sc_out< bool > M_AXI_GP0_BREADY;
@@ -414,17 +392,6 @@ public:
 
   // module pin-to-pin RTL interface
 
-  sc_core::sc_out< sc_dt::sc_bv<1> > ENET0_GMII_TX_EN;
-  sc_core::sc_out< sc_dt::sc_bv<1> > ENET0_GMII_TX_ER;
-  sc_core::sc_out< sc_dt::sc_bv<8> > ENET0_GMII_TXD;
-  sc_core::sc_in< bool > ENET0_GMII_COL;
-  sc_core::sc_in< bool > ENET0_GMII_CRS;
-  sc_core::sc_in< bool > ENET0_GMII_RX_CLK;
-  sc_core::sc_in< bool > ENET0_GMII_RX_DV;
-  sc_core::sc_in< bool > ENET0_GMII_RX_ER;
-  sc_core::sc_in< bool > ENET0_GMII_TX_CLK;
-  sc_core::sc_in< bool > ENET0_EXT_INTIN;
-  sc_core::sc_in< sc_dt::sc_bv<8> > ENET0_GMII_RXD;
   sc_core::sc_out< bool > M_AXI_GP0_ARVALID;
   sc_core::sc_out< bool > M_AXI_GP0_AWVALID;
   sc_core::sc_out< bool > M_AXI_GP0_BREADY;
@@ -585,17 +552,6 @@ public:
 
   // module pin-to-pin RTL interface
 
-  sc_core::sc_out< sc_dt::sc_bv<1> > ENET0_GMII_TX_EN;
-  sc_core::sc_out< sc_dt::sc_bv<1> > ENET0_GMII_TX_ER;
-  sc_core::sc_out< sc_dt::sc_bv<8> > ENET0_GMII_TXD;
-  sc_core::sc_in< bool > ENET0_GMII_COL;
-  sc_core::sc_in< bool > ENET0_GMII_CRS;
-  sc_core::sc_in< bool > ENET0_GMII_RX_CLK;
-  sc_core::sc_in< bool > ENET0_GMII_RX_DV;
-  sc_core::sc_in< bool > ENET0_GMII_RX_ER;
-  sc_core::sc_in< bool > ENET0_GMII_TX_CLK;
-  sc_core::sc_in< bool > ENET0_EXT_INTIN;
-  sc_core::sc_in< sc_dt::sc_bv<8> > ENET0_GMII_RXD;
   sc_core::sc_out< bool > M_AXI_GP0_ARVALID;
   sc_core::sc_out< bool > M_AXI_GP0_AWVALID;
   sc_core::sc_out< bool > M_AXI_GP0_BREADY;
@@ -764,17 +720,6 @@ public:
 
   // module pin-to-pin RTL interface
 
-  sc_core::sc_out< sc_dt::sc_bv<1> > ENET0_GMII_TX_EN;
-  sc_core::sc_out< sc_dt::sc_bv<1> > ENET0_GMII_TX_ER;
-  sc_core::sc_out< sc_dt::sc_bv<8> > ENET0_GMII_TXD;
-  sc_core::sc_in< bool > ENET0_GMII_COL;
-  sc_core::sc_in< bool > ENET0_GMII_CRS;
-  sc_core::sc_in< bool > ENET0_GMII_RX_CLK;
-  sc_core::sc_in< bool > ENET0_GMII_RX_DV;
-  sc_core::sc_in< bool > ENET0_GMII_RX_ER;
-  sc_core::sc_in< bool > ENET0_GMII_TX_CLK;
-  sc_core::sc_in< bool > ENET0_EXT_INTIN;
-  sc_core::sc_in< sc_dt::sc_bv<8> > ENET0_GMII_RXD;
   sc_core::sc_out< bool > M_AXI_GP0_ARVALID;
   sc_core::sc_out< bool > M_AXI_GP0_AWVALID;
   sc_core::sc_out< bool > M_AXI_GP0_BREADY;

@@ -1,6 +1,6 @@
 sdt: hw_artifacts\ps7_cortexa9_0_baremetal.dts
 family: Zynq
-path: C:/Users/Arf/Desktop/IP-Camera/ip_camera/ipcamera_platform/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp
+path: C:\Users\Arf\Desktop\IP-Camera\ip_camera\ipcamera_platform\ps7_cortexa9_0\standalone_ps7_cortexa9_0\bsp
 config: None
 os: standalone
 os_info:
@@ -170,9 +170,6 @@ drv_info:
     driver: axivdma
     ip_name: axi_vdma
     path: E:\xilinx\Vitis\2024.1\data\embeddedsw\XilinxProcessorIPLib\drivers\axivdma_v6_15
-    examples:
-      xaxivdma_example_intr.c: []
-      xaxivdma_example_selftest.c: []
   ps7_afi_0: None
   ps7_afi_1: None
   ps7_afi_2: None
@@ -186,43 +183,25 @@ drv_info:
     driver: devcfg
     ip_name: ps7_dev_cfg
     path: E:\xilinx\Vitis\2024.1\data\embeddedsw\XilinxProcessorIPLib\drivers\devcfg_v3_8
-    examples:
-      xdevcfg_interrupt_example.c: []
-      xdevcfg_polled_example.c: []
-      xdevcfg_reg_readback_example.c: []
-      xdevcfg_selftest_example.c: []
   ps7_dma_ns: None
   ps7_dma_s:
     driver: dmaps
     ip_name: ps7_dma
     path: E:\xilinx\Vitis\2024.1\data\embeddedsw\XilinxProcessorIPLib\drivers\dmaps_v2_10
-    examples:
-      xdmaps_example_w_intr.c: []
   ps7_ethernet_0:
     driver: emacps
     ip_name: ps7_ethernet
     path: E:\xilinx\Vitis\2024.1\data\embeddedsw\XilinxProcessorIPLib\drivers\emacps_v3_20
-    examples:
-      xemacps_example_intr_dma.c:
-      - xemacps_example_util.c
-      - xemacps_example.h
   ps7_globaltimer_0: None
   ps7_gpio_0:
     driver: gpiops
     ip_name: ps7_gpio
     path: E:\xilinx\Vitis\2024.1\data\embeddedsw\XilinxProcessorIPLib\drivers\gpiops_v3_13
-    examples:
-      xgpiops_intr_example.c: []
-      xgpiops_polled_example.c: []
   ps7_gpv_0: None
   ps7_intc_dist_0:
     driver: scugic
     ip_name: ps7_intc_dist
     path: E:\xilinx\Vitis\2024.1\data\embeddedsw\XilinxProcessorIPLib\drivers\scugic_v5_3
-    examples:
-      xscugic_example.c: []
-      xscugic_low_level_example.c: []
-      xscugic_tapp_example.c: []
   ps7_iop_bus_config_0: None
   ps7_nand_0: None
   ps7_ocmc_0: None
@@ -233,48 +212,27 @@ drv_info:
     driver: scutimer
     ip_name: ps7_scutimer
     path: E:\xilinx\Vitis\2024.1\data\embeddedsw\XilinxProcessorIPLib\drivers\scutimer_v2_6
-    examples:
-      xscutimer_polled_example.c: []
-      xscutimer_intr_example.c: []
   ps7_scuwdt_0:
     driver: scuwdt
     ip_name: ps7_scuwdt
     path: E:\xilinx\Vitis\2024.1\data\embeddedsw\XilinxProcessorIPLib\drivers\scuwdt_v2_5
-    examples:
-      xscuwdt_intr_example.c: []
-      xscuwdt_polled_example.c: []
   ps7_sd_0:
     driver: sdps
     ip_name: ps7_sdio
     path: E:\xilinx\Vitis\2024.1\data\embeddedsw\XilinxProcessorIPLib\drivers\sdps_v4_3
-    examples:
-      xsdps_raw_example.c: []
   ps7_slcr_0: None
   ps7_smcc_0:
     driver: nandps
     ip_name: ps7_smcc
     path: E:\xilinx\Vitis\2024.1\data\embeddedsw\XilinxProcessorIPLib\drivers\nandps_v2_9
-    examples:
-      xnandps_cache_example.c: []
-      xnandps_example.c: []
-      xnandps_skip_example.c: []
   ps7_uart_1:
     driver: uartps
     ip_name: ps7_uart
     path: E:\xilinx\Vitis\2024.1\data\embeddedsw\XilinxProcessorIPLib\drivers\uartps_v3_14
-    examples:
-      xuartps_hello_world_example.c: []
-      xuartps_intr_example.c: []
-      xuartps_low_echo_example.c: []
-      xuartps_polled_example.c: []
-      xuartps_selftest_example.c: []
   ps7_xadc_0:
     driver: xadcps
     ip_name: ps7_xadc
     path: E:\xilinx\Vitis\2024.1\data\embeddedsw\XilinxProcessorIPLib\drivers\xadcps_v2_7
-    examples:
-      xadcps_intr_example.c: []
-      xadcps_polled_printf_example.c: []
 lib_info:
   xiltimer:
     path: E:\xilinx\Vitis\2024.1\data\embeddedsw\lib\sw_services\xiltimer_v2_0
@@ -356,7 +314,7 @@ lib_config:
       name: lwip220_debug
       permission: read_write
       type: boolean
-      value: 'false'
+      value: 'true'
       default: 'false'
       options:
       - 'true'
@@ -392,7 +350,7 @@ lib_config:
       name: lwip220_dhcp
       permission: read_write
       type: boolean
-      value: 'false'
+      value: 'true'
       default: 'false'
       options:
       - 'true'
@@ -402,7 +360,7 @@ lib_config:
       name: lwip220_dhcp_debug
       permission: read_write
       type: boolean
-      value: 'false'
+      value: 'true'
       default: 'false'
       options:
       - 'true'
@@ -470,7 +428,7 @@ lib_config:
       name: lwip220_ip_debug
       permission: read_write
       type: boolean
-      value: 'false'
+      value: 'true'
       default: 'false'
       options:
       - 'true'
@@ -706,7 +664,7 @@ lib_config:
       name: lwip220_netif_debug
       permission: read_write
       type: boolean
-      value: 'false'
+      value: 'true'
       default: 'false'
       options:
       - 'true'
@@ -987,7 +945,7 @@ lib_config:
       name: lwip220_udp_debug
       permission: read_write
       type: boolean
-      value: 'false'
+      value: 'true'
       default: 'false'
       options:
       - 'true'

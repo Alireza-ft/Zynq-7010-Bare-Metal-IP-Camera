@@ -134,17 +134,6 @@ class processing_system7_v5_5_tlm : public sc_core::sc_module   {
     
     public:
     // Non-AXI ports are declared here
-    sc_core::sc_out<sc_dt::sc_bv<1> >  ENET0_GMII_TX_EN;
-    sc_core::sc_out<sc_dt::sc_bv<1> >  ENET0_GMII_TX_ER;
-    sc_core::sc_out<sc_dt::sc_bv<8> >  ENET0_GMII_TXD;
-    sc_core::sc_in<bool> ENET0_GMII_COL;
-    sc_core::sc_in<bool> ENET0_GMII_CRS;
-    sc_core::sc_in<bool> ENET0_GMII_RX_CLK;
-    sc_core::sc_in<bool> ENET0_GMII_RX_DV;
-    sc_core::sc_in<bool> ENET0_GMII_RX_ER;
-    sc_core::sc_in<bool> ENET0_GMII_TX_CLK;
-    sc_core::sc_in<bool> ENET0_EXT_INTIN;
-    sc_core::sc_in<sc_dt::sc_bv<8> >  ENET0_GMII_RXD;
     sc_core::sc_in<bool> M_AXI_GP0_ACLK;
     sc_core::sc_out<sc_dt::sc_bv<8> >  S_AXI_HP0_RCOUNT;
     sc_core::sc_out<sc_dt::sc_bv<8> >  S_AXI_HP0_WCOUNT;

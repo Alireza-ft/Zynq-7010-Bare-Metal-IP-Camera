@@ -279,18 +279,6 @@ void detect_phy(XEmacPs *xemacpsp)
 	u32_t emacnum;
 	u16_t phy_id;
 
-    u16 id1, id2;
-
-    for (phy_addr = 0; phy_addr < 32; phy_addr++) 
-    {
-
-        XEmacPs_PhyRead(xemacpsp, phy_addr, 2, &id1);
-        XEmacPs_PhyRead(xemacpsp, phy_addr, 3, &id2);
-
-        xil_printf("%02d : ID1=%04X ID2=%04X\r\n",
-                phy_addr, id1, id2);
-    }
-
 	if (xemacpsp->Config.BaseAddress == XPAR_XEMACPS_0_BASEADDR)
 		emacnum = 0;
 	else
@@ -298,7 +286,6 @@ void detect_phy(XEmacPs *xemacpsp)
 	for (phy_addr = 31; phy_addr > 0; phy_addr--) {
 		XEmacPs_PhyRead(xemacpsp, phy_addr, PHY_DETECT_REG,
 							&phy_reg);
-                            
 		XEmacPs_PhyRead(xemacpsp, phy_addr, PHY_IDENTIFIER_1_REG,
 				&phy_id);
 
@@ -852,30 +839,20 @@ static u32_t get_IEEE_phy_speed(XEmacPs *xemacpsp, u32_t phy_addr)
 
 	XEmacPs_PhyRead(xemacpsp, phy_addr, PHY_IDENTIFIER_1_REG,
 					&phy_identity);
-	if (phy_identity == PHY_TI_IDENTIFIER) 
-    {
+	if (phy_identity == PHY_TI_IDENTIFIER) {
 		RetStatus = get_TI_phy_speed(xemacpsp, phy_addr);
-	} 
-    else if (phy_identity == PHY_REALTEK_IDENTIFIER) 
-    {
+	} else if (phy_identity == PHY_REALTEK_IDENTIFIER) {
 		RetStatus = get_Realtek_phy_speed(xemacpsp, phy_addr);
-	} 
-    else if (phy_identity == PHY_XILINX_PCS_PMA_ID1) 
-    {
+	} else if (phy_identity == PHY_XILINX_PCS_PMA_ID1) {
 		RetStatus = get_Xilinx_pcs_pma_phy_speed(xemacpsp, phy_addr);
-	} 
-    else if (phy_identity == PHY_ADI_IDENTIFIER) {
+	} else if (phy_identity == PHY_ADI_IDENTIFIER) {
 		RetStatus = get_Adi_phy_speed(xemacpsp, phy_addr);
-	} 
-    else 
-		
-    {
-        //RetStatus = get_Marvell_phy_speed(xemacpsp, phy_addr);
-        
-        xil_printf("Unknown PHY (ID=%04X), forcing 100 Mbps\r\n", phy_identity);
-        RetStatus = 100;
-    }
-	
+	} else {
+		RetStatus = get_Marvell_phy_speed(xemacpsp, phy_addr);
+        xil_printf("this is test to see if RetStatus can get value without forcing it value is %d", RetStatus);
+        xil_printf("Unknown PHY (ID=%04X), forcing 1000 Mbps\r\n", phy_identity);
+        RetStatus = 1000;
+	}
 
 	return RetStatus;
 }

@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/synth_1'
+HD_PWD='C:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

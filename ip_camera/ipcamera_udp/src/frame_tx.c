@@ -15,13 +15,15 @@ int udp_send_frame(void)
             FRAME_HEIGHT *
             BYTES_PER_PIXEL;
 
+    // Invalidate BEFORE reading, not flush after - VDMA writes bypass
+    // the CPU D-cache, so the cache must be invalidated before the CPU
+    // reads this memory or it will see stale data.
+    Xil_DCacheInvalidateRange(FRAME_BUFFER_ADDR, frame_size);
+
     uint32_t offset = 0;
 
     xil_printf("Sending Frame...\r\n");
-    
 
-
-        
     while(offset < frame_size)
     {
         uint32_t packet_size = UDP_PAYLOAD_SIZE;
@@ -39,12 +41,9 @@ int udp_send_frame(void)
             return -1;
         }
 
-
         offset += packet_size;
     }
 
-    Xil_DCacheFlushRange(FRAME_BUFFER_ADDR, frame_size);
-        
     xil_printf("Frame Finished\r\n");
 
     return 0;

@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/synth_1/design_1_wrapper.tcl"
+  variable script "C:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.runs/synth_1/design_1_wrapper.tcl"
   variable category "vivado_synth"
 }
 
@@ -56,6 +56,7 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param bd.open.in_stealth_mode 2
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
 OPTRACE "Creating in-memory project" START { }
@@ -65,87 +66,87 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir {C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.cache/wt} [current_project]
-set_property parent.project_path {C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.xpr} [current_project]
+set_property webtalk.parent_dir C:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.cache/wt [current_project]
+set_property parent.project_path C:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
-set_property ip_output_repo {c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.cache/ip} [current_project]
+set_property ip_output_repo c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_vhdl -library xil_defaultlib {{C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd}}
-add_files {{C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.srcs/sources_1/bd/design_1/design_1.bd}}
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_board.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_1/bd_48ac_psr_aclk_0_board.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_1/bd_48ac_psr_aclk_0.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_2/bd_48ac_arinsw_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_3/bd_48ac_rinsw_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_4/bd_48ac_awinsw_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_5/bd_48ac_winsw_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_6/bd_48ac_binsw_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_7/bd_48ac_aroutsw_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_8/bd_48ac_routsw_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_9/bd_48ac_awoutsw_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_10/bd_48ac_woutsw_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_11/bd_48ac_boutsw_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_12/bd_48ac_arni_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_12/bd_48ac_arni_0_clocks.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_13/bd_48ac_rni_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_13/bd_48ac_rni_0_clocks.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_14/bd_48ac_awni_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_14/bd_48ac_awni_0_clocks.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_15/bd_48ac_wni_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_15/bd_48ac_wni_0_clocks.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_16/bd_48ac_bni_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_16/bd_48ac_bni_0_clocks.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_20/bd_48ac_s00a2s_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_21/bd_48ac_sarn_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_21/bd_48ac_sarn_0_clocks.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_22/bd_48ac_srn_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_22/bd_48ac_srn_0_clocks.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_23/bd_48ac_sawn_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_23/bd_48ac_sawn_0_clocks.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_24/bd_48ac_swn_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_24/bd_48ac_swn_0_clocks.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_25/bd_48ac_sbn_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_25/bd_48ac_sbn_0_clocks.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_26/bd_48ac_m00s2a_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_27/bd_48ac_m00arn_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_27/bd_48ac_m00arn_0_clocks.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_28/bd_48ac_m00rn_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_28/bd_48ac_m00rn_0_clocks.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_29/bd_48ac_m00awn_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_29/bd_48ac_m00awn_0_clocks.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_30/bd_48ac_m00wn_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_30/bd_48ac_m00wn_0_clocks.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_31/bd_48ac_m00bn_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_31/bd_48ac_m00bn_0_clocks.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/smartconnect.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_1_0/bd_0/ip/ip_1/bd_88fd_psr_aclk_0_board.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_1_0/bd_0/ip/ip_1/bd_88fd_psr_aclk_0.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_1_0/bd_0/ip/ip_5/bd_88fd_s00a2s_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_1_0/bd_0/ip/ip_6/bd_88fd_sawn_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_1_0/bd_0/ip/ip_6/bd_88fd_sawn_0_clocks.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_1_0/bd_0/ip/ip_7/bd_88fd_swn_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_1_0/bd_0/ip/ip_7/bd_88fd_swn_0_clocks.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_1_0/bd_0/ip/ip_8/bd_88fd_sbn_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_1_0/bd_0/ip/ip_8/bd_88fd_sbn_0_clocks.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_1_0/bd_0/ip/ip_9/bd_88fd_m00s2a_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_1_0/ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_1_0/smartconnect.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_axi_vdma_0_0/design_1_axi_vdma_0_0.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_axi_vdma_0_0/design_1_axi_vdma_0_0_clocks.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_axi_vdma_0_0/design_1_axi_vdma_0_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_axis_data_fifo_0_0/design_1_axis_data_fifo_0_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_1_0/design_1_proc_sys_reset_1_0_board.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_1_0/design_1_proc_sys_reset_1_0.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_1_0/design_1_proc_sys_reset_1_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/design_1_ooc.xdc}}]
+read_vhdl -library xil_defaultlib C:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+add_files C:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.srcs/sources_1/bd/design_1/design_1.bd
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_1/bd_48ac_psr_aclk_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_1/bd_48ac_psr_aclk_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_2/bd_48ac_arinsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_3/bd_48ac_rinsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_4/bd_48ac_awinsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_5/bd_48ac_winsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_6/bd_48ac_binsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_7/bd_48ac_aroutsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_8/bd_48ac_routsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_9/bd_48ac_awoutsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_10/bd_48ac_woutsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_11/bd_48ac_boutsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_12/bd_48ac_arni_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_12/bd_48ac_arni_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_13/bd_48ac_rni_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_13/bd_48ac_rni_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_14/bd_48ac_awni_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_14/bd_48ac_awni_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_15/bd_48ac_wni_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_15/bd_48ac_wni_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_16/bd_48ac_bni_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_16/bd_48ac_bni_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_20/bd_48ac_s00a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_21/bd_48ac_sarn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_21/bd_48ac_sarn_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_22/bd_48ac_srn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_22/bd_48ac_srn_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_23/bd_48ac_sawn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_23/bd_48ac_sawn_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_24/bd_48ac_swn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_24/bd_48ac_swn_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_25/bd_48ac_sbn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_25/bd_48ac_sbn_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_26/bd_48ac_m00s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_27/bd_48ac_m00arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_27/bd_48ac_m00arn_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_28/bd_48ac_m00rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_28/bd_48ac_m00rn_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_29/bd_48ac_m00awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_29/bd_48ac_m00awn_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_30/bd_48ac_m00wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_30/bd_48ac_m00wn_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_31/bd_48ac_m00bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_31/bd_48ac_m00bn_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/smartconnect.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_1_0/bd_0/ip/ip_1/bd_88fd_psr_aclk_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_1_0/bd_0/ip/ip_1/bd_88fd_psr_aclk_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_1_0/bd_0/ip/ip_5/bd_88fd_s00a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_1_0/bd_0/ip/ip_6/bd_88fd_sawn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_1_0/bd_0/ip/ip_6/bd_88fd_sawn_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_1_0/bd_0/ip/ip_7/bd_88fd_swn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_1_0/bd_0/ip/ip_7/bd_88fd_swn_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_1_0/bd_0/ip/ip_8/bd_88fd_sbn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_1_0/bd_0/ip/ip_8/bd_88fd_sbn_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_1_0/bd_0/ip/ip_9/bd_88fd_m00s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_1_0/ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_1_0/smartconnect.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_axi_vdma_0_0/design_1_axi_vdma_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_axi_vdma_0_0/design_1_axi_vdma_0_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_axi_vdma_0_0/design_1_axi_vdma_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_axis_data_fifo_0_0/design_1_axis_data_fifo_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_1_0/design_1_proc_sys_reset_1_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_1_0/design_1_proc_sys_reset_1_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_1_0/design_1_proc_sys_reset_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/design_1_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -156,14 +157,14 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc {{C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.srcs/constrs_1/new/antminer_ov7670.xdc}}
-set_property used_in_implementation false [get_files {{C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.srcs/constrs_1/new/antminer_ov7670.xdc}}]
+read_xdc C:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.srcs/constrs_1/new/antminer_ov7670.xdc
+set_property used_in_implementation false [get_files C:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.srcs/constrs_1/new/antminer_ov7670.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental {C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.srcs/utils_1/imports/synth_1/ov7670_controller.dcp}
+read_checkpoint -auto_incremental -incremental C:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.srcs/utils_1/imports/synth_1/ov7670_controller.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

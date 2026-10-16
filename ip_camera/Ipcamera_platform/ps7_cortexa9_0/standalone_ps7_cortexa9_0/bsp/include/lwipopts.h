@@ -75,8 +75,8 @@
 #define CHECKSUM_CHECK_UDP  0
 #define CHECKSUM_CHECK_IP   0
 
-/* #undef LWIP_FULL_CSUM_OFFLOAD_RX */
-/* #undef LWIP_FULL_CSUM_OFFLOAD_TX */
+#define LWIP_FULL_CSUM_OFFLOAD_RX 1
+#define LWIP_FULL_CSUM_OFFLOAD_TX 1
 
 #define MEMP_SEPARATE_POOLS 1
 #define MEMP_NUM_FRAG_PBUF 256
@@ -85,7 +85,7 @@
 #define TCP_OVERSIZE TCP_MSS
 /* #undef USE_JUMBO_FRAMES */
 
-#define LWIP_DHCP  0
+#define LWIP_DHCP   1
 #define LWIP_DHCP_DOES_ACD_CHECK  0
 #define LWIP_ACD  0
 
@@ -94,23 +94,23 @@
 /* #undef LWIP_STATS */
 /* #undef LWIP_STATS_DISPLAY */
 
-/* #undef LWIP_DEBUG */
-/* #undef DBG_TYPES_ON */
-/* #undef IP_DEBUG */
+#define LWIP_DEBUG 1
+#define DBG_TYPES_ON DBG_LEVEL_WARNING
+#define IP_DEBUG LWIP_DBG_LEVEL_SEVERE|LWIP_DBG_ON
 /* #undef TCP_DEBUG */
 /* #undef TCP_INPUT_DEBUG */
 /* #undef TCP_OUTPUT_DEBUG */
 /* #undef TCPIP_DEBUG */
-/* #undef UDP_DEBUG */
+#define UDP_DEBUG LWIP_DBG_LEVEL_SEVERE|LWIP_DBG_ON
 /* #undef ICMP_DEBUG */
 /* #undef IGMP_DEBUG */
-/* #undef NETIF_DEBUG */
+#define NETIF_DEBUG LWIP_DBG_LEVEL_SEVERE|LWIP_DBG_ON
 /* #undef SYS_DEBUG */
 /* #undef API_MSG_DEBUG */
 /* #undef PBUF_DEBUG */
-/* #undef DHCP_DEBUG */
+#define DHCP_DEBUG LWIP_DBG_LEVEL_SEVERE|LWIP_DBG_ON
 /* #undef ACD_DEBUG */
-/* #undef MEMP_DEBUG */
+#define MEMP_DEBUG LWIP_DBG_LEVEL_SEVERE|LWIP_DBG_ON
 /* #undef OS_IS_FREERTOS */
 /* #undef LWIP_PROVIDE_ERRNO */
 /* #undef DEFAULT_THREAD_PRIO */

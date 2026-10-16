@@ -2,10 +2,10 @@
 -- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
--- Date        : Sat Jun 20 21:19:51 2026
+-- Date        : Thu Jul 23 23:53:16 2026
 -- Host        : DESKTOP-GTOUM49 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub -rename_top design_1_smartconnect_0_0 -prefix
---               design_1_smartconnect_0_0_ design_1_smartconnect_0_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub
+--               c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/design_1_smartconnect_0_0_stub.vhdl
 -- Design      : design_1_smartconnect_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z010clg400-1

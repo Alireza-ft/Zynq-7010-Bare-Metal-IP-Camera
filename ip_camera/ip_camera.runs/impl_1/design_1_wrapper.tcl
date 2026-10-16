@@ -1,5 +1,5 @@
 namespace eval ::optrace {
-  variable script "C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/impl_1/design_1_wrapper.tcl"
+  variable script "C:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.runs/impl_1/design_1_wrapper.tcl"
   variable category "vivado_impl"
 }
 
@@ -108,9 +108,10 @@ set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
   set_param chipscope.maxJobs 1
+  set_param bd.open.in_stealth_mode 2
   set_param runs.launchOptions { -jobs 2  }
   open_checkpoint design_1_wrapper_routed.dcp
-  set_property webtalk.parent_dir {C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.cache/wt} [current_project]
+  set_property webtalk.parent_dir C:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.cache/wt [current_project]
 set_property TOP design_1_wrapper [current_fileset]
 OPTRACE "read constraints: write_bitstream" START { }
 OPTRACE "read constraints: write_bitstream" END { }

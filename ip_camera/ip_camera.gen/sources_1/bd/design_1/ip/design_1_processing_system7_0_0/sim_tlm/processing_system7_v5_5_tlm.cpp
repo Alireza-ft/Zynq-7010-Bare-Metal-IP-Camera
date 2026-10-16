@@ -144,17 +144,6 @@ void add_extensions_to_tlm(const xtlm::aximm_payload* xtlm_pay, tlm::tlm_generic
 
 processing_system7_v5_5_tlm :: processing_system7_v5_5_tlm (sc_core::sc_module_name name,
     xsc::common_cpp::properties& _prop): sc_module(name)//registering module name with parent
-        ,ENET0_GMII_TX_EN("ENET0_GMII_TX_EN")
-        ,ENET0_GMII_TX_ER("ENET0_GMII_TX_ER")
-        ,ENET0_GMII_TXD("ENET0_GMII_TXD")
-        ,ENET0_GMII_COL("ENET0_GMII_COL")
-        ,ENET0_GMII_CRS("ENET0_GMII_CRS")
-        ,ENET0_GMII_RX_CLK("ENET0_GMII_RX_CLK")
-        ,ENET0_GMII_RX_DV("ENET0_GMII_RX_DV")
-        ,ENET0_GMII_RX_ER("ENET0_GMII_RX_ER")
-        ,ENET0_GMII_TX_CLK("ENET0_GMII_TX_CLK")
-        ,ENET0_EXT_INTIN("ENET0_EXT_INTIN")
-        ,ENET0_GMII_RXD("ENET0_GMII_RXD")
         ,M_AXI_GP0_ACLK("M_AXI_GP0_ACLK")
         ,S_AXI_HP0_RCOUNT("S_AXI_HP0_RCOUNT")
         ,S_AXI_HP0_WCOUNT("S_AXI_HP0_WCOUNT")

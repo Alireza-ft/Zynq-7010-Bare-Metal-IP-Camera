@@ -3,12 +3,12 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Sat Jun 20 20:45:32 2026
-# Process ID: 4376
-# Current directory: C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/design_1_processing_system7_0_0_synth_1
+# Start of session at: Thu Jul 23 23:41:27 2026
+# Process ID: 7768
+# Current directory: C:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.runs/design_1_processing_system7_0_0_synth_1
 # Command line: vivado.exe -log design_1_processing_system7_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_processing_system7_0_0.tcl
-# Log file: C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/design_1_processing_system7_0_0_synth_1/design_1_processing_system7_0_0.vds
-# Journal file: C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/design_1_processing_system7_0_0_synth_1\vivado.jou
+# Log file: C:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.runs/design_1_processing_system7_0_0_synth_1/design_1_processing_system7_0_0.vds
+# Journal file: C:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.runs/design_1_processing_system7_0_0_synth_1\vivado.jou
 # Running On        :DESKTOP-GTOUM49
 # Platform          :Windows Server 2016 or Windows 10
 # Operating System  :19045
@@ -17,12 +17,12 @@
 # CPU Physical cores:2
 # CPU Logical cores :4
 # Host memory       :3688 MB
-# Swap memory       :6677 MB
-# Total Virtual     :10366 MB
-# Available Virtual :5168 MB
+# Swap memory       :3801 MB
+# Total Virtual     :7490 MB
+# Available Virtual :1665 MB
 #-----------------------------------------------------------
 source design_1_processing_system7_0_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:32 . Memory (MB): peak = 495.609 ; gain = 200.734
+create_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:30 . Memory (MB): peak = 496.555 ; gain = 201.480
 Command: synth_design -top design_1_processing_system7_0_0 -part xc7z010clg400-1 -incremental_mode off -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
@@ -31,34 +31,46 @@ INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Device 21-9227] Part: xc7z010clg400-1 does not have CEAM library.
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 5756
+INFO: [Synth 8-7075] Helper process launched with PID 9280
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:01:09 . Memory (MB): peak = 1368.266 ; gain = 449.336
+Starting RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:02:32 . Memory (MB): peak = 1366.855 ; gain = 446.195
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:53]
-INFO: [Synth 8-6157] synthesizing module 'processing_system7_v5_5_processing_system7' [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:152]
+INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'processing_system7_v5_5_processing_system7' [c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:152]
 INFO: [Synth 8-6157] synthesizing module 'BUFG' [E:/xilinx/Vivado/2024.1/scripts/rt/data/unisim_comp.v:1951]
 INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [E:/xilinx/Vivado/2024.1/scripts/rt/data/unisim_comp.v:1951]
 INFO: [Synth 8-6157] synthesizing module 'BIBUF' [E:/xilinx/Vivado/2024.1/scripts/rt/data/unisim_comp.v:1598]
 INFO: [Synth 8-6155] done synthesizing module 'BIBUF' (0#1) [E:/xilinx/Vivado/2024.1/scripts/rt/data/unisim_comp.v:1598]
 INFO: [Synth 8-6157] synthesizing module 'PS7' [E:/xilinx/Vivado/2024.1/scripts/rt/data/unisim_comp.v:115258]
 INFO: [Synth 8-6155] done synthesizing module 'PS7' (0#1) [E:/xilinx/Vivado/2024.1/scripts/rt/data/unisim_comp.v:115258]
-INFO: [Synth 8-6155] done synthesizing module 'processing_system7_v5_5_processing_system7' (0#1) [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:152]
-WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:494]
-WARNING: [Synth 8-7071] port 'M_AXI_GP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:494]
-WARNING: [Synth 8-7071] port 'S_AXI_GP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:494]
-WARNING: [Synth 8-7071] port 'S_AXI_GP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:494]
-WARNING: [Synth 8-7071] port 'S_AXI_ACP_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:494]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:494]
-WARNING: [Synth 8-7071] port 'S_AXI_HP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:494]
-WARNING: [Synth 8-7071] port 'S_AXI_HP2_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:494]
-WARNING: [Synth 8-7071] port 'S_AXI_HP3_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:494]
-WARNING: [Synth 8-7071] port 'DMA0_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:494]
-WARNING: [Synth 8-7071] port 'DMA1_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:494]
-WARNING: [Synth 8-7071] port 'DMA2_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:494]
-WARNING: [Synth 8-7071] port 'DMA3_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:494]
-WARNING: [Synth 8-7023] instance 'inst' of module 'processing_system7_v5_5_processing_system7' has 685 connections declared, but only 672 given [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:494]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (0#1) [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'processing_system7_v5_5_processing_system7' (0#1) [c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:152]
+WARNING: [Synth 8-7071] port 'M_AXI_GP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:460]
+WARNING: [Synth 8-7071] port 'M_AXI_GP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:460]
+WARNING: [Synth 8-7071] port 'S_AXI_GP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:460]
+WARNING: [Synth 8-7071] port 'S_AXI_GP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:460]
+WARNING: [Synth 8-7071] port 'S_AXI_ACP_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:460]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:460]
+WARNING: [Synth 8-7071] port 'S_AXI_HP1_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:460]
+WARNING: [Synth 8-7071] port 'S_AXI_HP2_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:460]
+WARNING: [Synth 8-7071] port 'S_AXI_HP3_ARESETN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:460]
+WARNING: [Synth 8-7071] port 'DMA0_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:460]
+WARNING: [Synth 8-7071] port 'DMA1_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:460]
+WARNING: [Synth 8-7071] port 'DMA2_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:460]
+WARNING: [Synth 8-7071] port 'DMA3_RSTN' of module 'processing_system7_v5_5_processing_system7' is unconnected for instance 'inst' [c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:460]
+WARNING: [Synth 8-7023] instance 'inst' of module 'processing_system7_v5_5_processing_system7' has 685 connections declared, but only 672 given [c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:460]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (0#1) [c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:53]
+WARNING: [Synth 8-7129] Port ENET0_GMII_COL in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ENET0_GMII_CRS in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ENET0_GMII_RX_DV in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ENET0_GMII_RX_ER in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ENET0_GMII_RXD[7] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ENET0_GMII_RXD[6] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ENET0_GMII_RXD[5] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ENET0_GMII_RXD[4] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ENET0_GMII_RXD[3] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ENET0_GMII_RXD[2] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ENET0_GMII_RXD[1] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ENET0_GMII_RXD[0] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ENET1_GMII_COL in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ENET1_GMII_CRS in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ENET1_GMII_RX_DV in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
@@ -127,63 +139,60 @@ WARNING: [Synth 8-7129] Port FTMD_TRACEIN_ATID[2] in module processing_system7_v
 WARNING: [Synth 8-7129] Port FTMD_TRACEIN_ATID[1] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port FTMD_TRACEIN_ATID[0] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:02:20 . Memory (MB): peak = 1491.566 ; gain = 572.637
+Finished RTL Elaboration : Time (s): cpu = 00:00:17 ; elapsed = 00:02:58 . Memory (MB): peak = 1490.852 ; gain = 570.191
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:02:23 . Memory (MB): peak = 1491.566 ; gain = 572.637
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:03:03 . Memory (MB): peak = 1490.852 ; gain = 570.191
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:15 ; elapsed = 00:02:23 . Memory (MB): peak = 1491.566 ; gain = 572.637
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:17 ; elapsed = 00:03:03 . Memory (MB): peak = 1490.852 ; gain = 570.191
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.197 . Memory (MB): peak = 1491.566 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 1490.852 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc] for cell 'inst'
-Finished Parsing XDC File [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc] for cell 'inst'
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_processing_system7_0_0_propImpl.xdc].
+Parsing XDC File [c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc] for cell 'inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_processing_system7_0_0_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_processing_system7_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/design_1_processing_system7_0_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/design_1_processing_system7_0_0_synth_1/dont_touch.xdc]
+Parsing XDC File [C:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.runs/design_1_processing_system7_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.runs/design_1_processing_system7_0_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1491.566 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1490.852 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 1491.566 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 1490.852 ; gain = 0.000
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:30 ; elapsed = 00:04:37 . Memory (MB): peak = 1491.566 ; gain = 572.637
+Finished Constraint Validation : Time (s): cpu = 00:00:35 ; elapsed = 00:05:46 . Memory (MB): peak = 1490.852 ; gain = 570.191
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:30 ; elapsed = 00:04:37 . Memory (MB): peak = 1491.566 ; gain = 572.637
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:35 ; elapsed = 00:05:50 . Memory (MB): peak = 1490.852 ; gain = 570.191
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  {C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/design_1_processing_system7_0_0_synth_1/dont_touch.xdc}, line 9).
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  C:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.runs/design_1_processing_system7_0_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:04:39 . Memory (MB): peak = 1491.566 ; gain = 572.637
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:05:56 . Memory (MB): peak = 1490.852 ; gain = 570.191
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:31 ; elapsed = 00:04:42 . Memory (MB): peak = 1491.566 ; gain = 572.637
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:36 ; elapsed = 00:06:04 . Memory (MB): peak = 1490.852 ; gain = 570.191
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
-+---Registers : 
-	                8 Bit    Registers := 2     
-	                1 Bit    Registers := 6     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -200,6 +209,18 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port ENET0_GMII_COL in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ENET0_GMII_CRS in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ENET0_GMII_RX_DV in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ENET0_GMII_RX_ER in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ENET0_GMII_RXD[7] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ENET0_GMII_RXD[6] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ENET0_GMII_RXD[5] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ENET0_GMII_RXD[4] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ENET0_GMII_RXD[3] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ENET0_GMII_RXD[2] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ENET0_GMII_RXD[1] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ENET0_GMII_RXD[0] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ENET1_GMII_COL in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ENET1_GMII_CRS in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ENET1_GMII_RX_DV in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
@@ -209,51 +230,27 @@ WARNING: [Synth 8-7129] Port ENET1_GMII_RXD[6] in module processing_system7_v5_5
 WARNING: [Synth 8-7129] Port ENET1_GMII_RXD[5] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ENET1_GMII_RXD[4] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ENET1_GMII_RXD[3] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ENET1_GMII_RXD[2] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ENET1_GMII_RXD[1] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ENET1_GMII_RXD[0] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_GP0_ARSIZE[2] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_GP0_AWSIZE[2] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_GP1_ARSIZE[2] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_GP1_AWSIZE[2] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_ACP_ARSIZE[2] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_ACP_AWSIZE[2] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_HP0_ARSIZE[2] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_HP0_AWSIZE[2] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_HP1_ARSIZE[2] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_HP1_AWSIZE[2] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_HP2_ARSIZE[2] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_HP2_AWSIZE[2] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_HP3_ARSIZE[2] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_HP3_AWSIZE[2] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port FCLK_CLKTRIG3_N in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port FCLK_CLKTRIG2_N in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port FCLK_CLKTRIG1_N in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port FCLK_CLKTRIG0_N in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port FTMD_TRACEIN_DATA[31] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port FTMD_TRACEIN_DATA[30] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port FTMD_TRACEIN_DATA[29] in module processing_system7_v5_5_processing_system7 is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:04:53 . Memory (MB): peak = 1491.566 ; gain = 572.637
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:06:18 . Memory (MB): peak = 1490.852 ; gain = 570.191
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:46 ; elapsed = 00:05:14 . Memory (MB): peak = 1576.660 ; gain = 657.730
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:54 ; elapsed = 00:06:42 . Memory (MB): peak = 1571.613 ; gain = 650.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:46 ; elapsed = 00:05:14 . Memory (MB): peak = 1597.012 ; gain = 678.082
+Finished Timing Optimization : Time (s): cpu = 00:00:54 ; elapsed = 00:06:45 . Memory (MB): peak = 1591.906 ; gain = 671.246
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:46 ; elapsed = 00:05:15 . Memory (MB): peak = 1599.387 ; gain = 680.457
+Finished Technology Mapping : Time (s): cpu = 00:00:54 ; elapsed = 00:06:49 . Memory (MB): peak = 1594.195 ; gain = 673.535
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -271,37 +268,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:56 ; elapsed = 00:05:26 . Memory (MB): peak = 1615.207 ; gain = 696.277
+Finished IO Insertion : Time (s): cpu = 00:01:05 ; elapsed = 00:07:05 . Memory (MB): peak = 1609.012 ; gain = 688.352
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:56 ; elapsed = 00:05:26 . Memory (MB): peak = 1615.207 ; gain = 696.277
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:05 ; elapsed = 00:07:06 . Memory (MB): peak = 1609.012 ; gain = 688.352
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:56 ; elapsed = 00:05:27 . Memory (MB): peak = 1615.207 ; gain = 696.277
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:05 ; elapsed = 00:07:08 . Memory (MB): peak = 1609.012 ; gain = 688.352
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:56 ; elapsed = 00:05:27 . Memory (MB): peak = 1615.207 ; gain = 696.277
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:05 ; elapsed = 00:07:08 . Memory (MB): peak = 1609.012 ; gain = 688.352
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:56 ; elapsed = 00:05:27 . Memory (MB): peak = 1615.207 ; gain = 696.277
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:05 ; elapsed = 00:07:10 . Memory (MB): peak = 1609.012 ; gain = 688.352
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:56 ; elapsed = 00:05:27 . Memory (MB): peak = 1615.207 ; gain = 696.277
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:05 ; elapsed = 00:07:10 . Memory (MB): peak = 1609.012 ; gain = 688.352
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -321,29 +318,28 @@ Report Cell Usage:
 |2     |BUFG  |     2|
 |3     |LUT1  |    24|
 |4     |PS7   |     1|
-|5     |FDRE  |    22|
 +------+------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:56 ; elapsed = 00:05:27 . Memory (MB): peak = 1615.207 ; gain = 696.277
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:05 ; elapsed = 00:07:15 . Memory (MB): peak = 1609.012 ; gain = 688.352
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 68 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:36 ; elapsed = 00:03:38 . Memory (MB): peak = 1615.207 ; gain = 696.277
-Synthesis Optimization Complete : Time (s): cpu = 00:00:56 ; elapsed = 00:05:28 . Memory (MB): peak = 1615.207 ; gain = 696.277
+Synthesis finished with 0 errors, 0 critical warnings and 80 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:44 ; elapsed = 00:05:12 . Memory (MB): peak = 1609.012 ; gain = 688.352
+Synthesis Optimization Complete : Time (s): cpu = 00:01:06 ; elapsed = 00:07:17 . Memory (MB): peak = 1609.012 ; gain = 688.352
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 1615.207 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.134 . Memory (MB): peak = 1609.012 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1627.938 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1609.012 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 137e6be2
+Synth Design complete | Checksum: 889a6e29
 INFO: [Common 17-83] Releasing license: Synthesis
 26 Infos, 115 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:08 ; elapsed = 00:06:31 . Memory (MB): peak = 1627.938 ; gain = 1111.426
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.430 . Memory (MB): peak = 1627.938 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.runs/design_1_processing_system7_0_0_synth_1/design_1_processing_system7_0_0.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:01 ; elapsed = 00:00:25 . Memory (MB): peak = 1627.938 ; gain = 0.000
+synth_design: Time (s): cpu = 00:01:17 ; elapsed = 00:09:46 . Memory (MB): peak = 1609.012 ; gain = 1093.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.270 . Memory (MB): peak = 1609.012 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.runs/design_1_processing_system7_0_0_synth_1/design_1_processing_system7_0_0.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:00 ; elapsed = 00:00:27 . Memory (MB): peak = 1609.012 ; gain = 0.000
 INFO: [Vivado 12-24828] Executing command : report_utilization -file design_1_processing_system7_0_0_utilization_synth.rpt -pb design_1_processing_system7_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Jun 20 20:54:25 2026...
+INFO: [Common 17-206] Exiting Vivado at Thu Jul 23 23:53:03 2026...

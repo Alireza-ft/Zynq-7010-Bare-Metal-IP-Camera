@@ -62,6 +62,11 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("C:/Users/Arf/Desktop/IP-Camera/ip_camera/ipcamera_platform/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/xilrsa/src/cmake_install.cmake")
 endif()
 
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("C:/Users/Arf/Desktop/IP-Camera/ip_camera/ipcamera_platform/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/lwip220/src/cmake_install.cmake")
+endif()
+
 if(CMAKE_INSTALL_COMPONENT)
   set(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INSTALL_COMPONENT}.txt")
 else()

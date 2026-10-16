@@ -2,7 +2,7 @@
 --Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
---Date        : Sun Jun 21 19:53:55 2026
+--Date        : Thu Jul 23 23:39:04 2026
 --Host        : DESKTOP-GTOUM49 running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -52,17 +52,6 @@ end design_1;
 architecture STRUCTURE of design_1 is
   component design_1_processing_system7_0_0 is
   port (
-    ENET0_GMII_TX_EN : out STD_LOGIC_VECTOR ( 0 to 0 );
-    ENET0_GMII_TX_ER : out STD_LOGIC_VECTOR ( 0 to 0 );
-    ENET0_GMII_TXD : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    ENET0_GMII_COL : in STD_LOGIC;
-    ENET0_GMII_CRS : in STD_LOGIC;
-    ENET0_GMII_RX_CLK : in STD_LOGIC;
-    ENET0_GMII_RX_DV : in STD_LOGIC;
-    ENET0_GMII_RX_ER : in STD_LOGIC;
-    ENET0_GMII_TX_CLK : in STD_LOGIC;
-    ENET0_EXT_INTIN : in STD_LOGIC;
-    ENET0_GMII_RXD : in STD_LOGIC_VECTOR ( 7 downto 0 );
     M_AXI_GP0_ARVALID : out STD_LOGIC;
     M_AXI_GP0_AWVALID : out STD_LOGIC;
     M_AXI_GP0_BREADY : out STD_LOGIC;
@@ -579,9 +568,6 @@ architecture STRUCTURE of design_1 is
   signal NLW_processing_system7_0_S_AXI_HP0_ARREADY_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_S_AXI_HP0_RLAST_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_S_AXI_HP0_RVALID_UNCONNECTED : STD_LOGIC;
-  signal NLW_processing_system7_0_ENET0_GMII_TXD_UNCONNECTED : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal NLW_processing_system7_0_ENET0_GMII_TX_EN_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal NLW_processing_system7_0_ENET0_GMII_TX_ER_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_processing_system7_0_S_AXI_HP0_BID_UNCONNECTED : STD_LOGIC_VECTOR ( 5 downto 0 );
   signal NLW_processing_system7_0_S_AXI_HP0_RACOUNT_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal NLW_processing_system7_0_S_AXI_HP0_RCOUNT_UNCONNECTED : STD_LOGIC_VECTOR ( 7 downto 0 );
@@ -769,17 +755,6 @@ processing_system7_0: component design_1_processing_system7_0_0
       DDR_VRN => FIXED_IO_ddr_vrn,
       DDR_VRP => FIXED_IO_ddr_vrp,
       DDR_WEB => DDR_we_n,
-      ENET0_EXT_INTIN => '0',
-      ENET0_GMII_COL => '0',
-      ENET0_GMII_CRS => '0',
-      ENET0_GMII_RXD(7 downto 0) => B"00000000",
-      ENET0_GMII_RX_CLK => '0',
-      ENET0_GMII_RX_DV => '0',
-      ENET0_GMII_RX_ER => '0',
-      ENET0_GMII_TXD(7 downto 0) => NLW_processing_system7_0_ENET0_GMII_TXD_UNCONNECTED(7 downto 0),
-      ENET0_GMII_TX_CLK => '0',
-      ENET0_GMII_TX_EN(0) => NLW_processing_system7_0_ENET0_GMII_TX_EN_UNCONNECTED(0),
-      ENET0_GMII_TX_ER(0) => NLW_processing_system7_0_ENET0_GMII_TX_ER_UNCONNECTED(0),
       FCLK_CLK0 => processing_system7_0_FCLK_CLK0,
       FCLK_CLK1 => processing_system7_0_FCLK_CLK1,
       FCLK_RESET0_N => processing_system7_0_FCLK_RESET0_N,

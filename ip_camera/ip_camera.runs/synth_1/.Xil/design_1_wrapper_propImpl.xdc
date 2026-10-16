@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:{C:/Users/Arf/Desktop/ip_camera/New folder/IP-Camera-on-board-Antminer-S9/ip_camera/ip_camera.srcs/constrs_1/new/antminer_ov7670.xdc} rfile:../../../ip_camera.srcs/constrs_1/new/antminer_ov7670.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.srcs/constrs_1/new/antminer_ov7670.xdc rfile:../../../ip_camera.srcs/constrs_1/new/antminer_ov7670.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:5 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN U18 [get_ports {d_0[0]}]
 set_property src_info {type:XDC file:1 line:6 export:INPUT save:INPUT read:READ} [current_design]

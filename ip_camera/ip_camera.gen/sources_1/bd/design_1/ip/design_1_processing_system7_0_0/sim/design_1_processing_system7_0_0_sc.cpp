@@ -62,7 +62,7 @@ design_1_processing_system7_0_0_sc::design_1_processing_system7_0_0_sc(const sc_
   // initialize module
     xsc::common_cpp::properties model_param_props;
     model_param_props.addLong("C_EN_EMIO_PJTAG", "0");
-    model_param_props.addLong("C_EN_EMIO_ENET0", "1");
+    model_param_props.addLong("C_EN_EMIO_ENET0", "0");
     model_param_props.addLong("C_EN_EMIO_ENET1", "0");
     model_param_props.addLong("C_EN_EMIO_TRACE", "0");
     model_param_props.addLong("C_INCLUDE_TRACE_BUFFER", "0");

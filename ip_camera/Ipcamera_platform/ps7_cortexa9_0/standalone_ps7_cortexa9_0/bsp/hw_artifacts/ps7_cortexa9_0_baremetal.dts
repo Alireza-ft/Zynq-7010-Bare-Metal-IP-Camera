@@ -311,7 +311,7 @@
                         #address-cells = <0x1>;
                         #size-cells = <0x0>;
                         xlnx,has-mdio = <0x1>;
-                        phy-mode = "gmii";
+                        phy-mode = "rgmii-id";
                         xlnx,enet-slcr-1000mbps-div0 = <0x1>;
                         xlnx,enet-slcr-10mbps-div0 = <0x1>;
                         xlnx,rable = <0x0>;
@@ -319,7 +319,7 @@
                         xlnx,enet-slcr-10mbps-div1 = <0x32>;
                         xlnx,interconnect-s-axi-masters = "ps7_cortexa9_0.M_AXI_DP , & , ps7_cortexa9_1.M_AXI_DP";
                         xlnx,ip-name = "ps7_ethernet";
-                        xlnx,eth-mode = <0x0>;
+                        xlnx,eth-mode = <0x1>;
                         xlnx,enet-clk-freq-hz = <0x7735940>;
                         xlnx,enet-slcr-100mbps-div0 = <0x1>;
                         xlnx,ptp-enet-clock = <0x69f6bcb>;

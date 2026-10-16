@@ -3,10 +3,10 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Thu Jul 23 21:59:29 2026
-# Process ID: 1496
+# Start of session at: Fri Aug  7 01:02:13 2026
+# Process ID: 8740
 # Current directory: C:/Users/Arf/Desktop/IP-Camera/ip_camera
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4776 C:\Users\Arf\Desktop\IP-Camera\ip_camera\ip_camera.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6032 C:\Users\Arf\Desktop\IP-Camera\ip_camera\ip_camera.xpr
 # Log file: C:/Users/Arf/Desktop/IP-Camera/ip_camera/vivado.log
 # Journal file: C:/Users/Arf/Desktop/IP-Camera/ip_camera\vivado.jou
 # Running On        :DESKTOP-GTOUM49
@@ -17,9 +17,9 @@
 # CPU Physical cores:2
 # CPU Logical cores :4
 # Host memory       :3688 MB
-# Swap memory       :3801 MB
-# Total Virtual     :7490 MB
-# Available Virtual :4035 MB
+# Swap memory       :4360 MB
+# Total Virtual     :8049 MB
+# Available Virtual :4585 MB
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.xpr
@@ -93,7 +93,7 @@ Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/xilinx/Vivado/2024.1/data/ip'.
-open_project: Time (s): cpu = 00:01:07 ; elapsed = 00:01:54 . Memory (MB): peak = 1565.340 ; gain = 542.160
+open_project: Time (s): cpu = 00:00:57 ; elapsed = 00:01:25 . Memory (MB): peak = 1553.992 ; gain = 522.359
 update_compile_order -fileset sources_1
 open_bd_design {C:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.srcs/sources_1/bd/design_1/design_1.bd}
 Reading block design file <C:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.srcs/sources_1/bd/design_1/design_1.bd>...
@@ -109,7 +109,9 @@ Adding component instance block -- xilinx.com:module_ref:ov7670_controller:1.0 -
 Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_0
 Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_cam
 Successfully read diagram <design_1> from block design file <C:/Users/Arf/Desktop/IP-Camera/ip_camera/ip_camera.srcs/sources_1/bd/design_1/design_1.bd>
-open_bd_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:30 . Memory (MB): peak = 1611.945 ; gain = 24.125
+open_bd_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:43 . Memory (MB): peak = 1600.660 ; gain = 25.023
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
 WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
 exit
-INFO: [Common 17-206] Exiting Vivado at Thu Jul 23 22:51:54 2026...
+INFO: [Common 17-206] Exiting Vivado at Fri Aug  7 01:11:17 2026...
